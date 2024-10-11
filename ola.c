@@ -16,5 +16,9 @@ void main() {
     char nome[30] = "Joao";
     printf("Nome: %s\n",nome);
     printf("Primeira letra: %c\n", nome[0]);
+    printf("\nDigite o valor de x: ");
+    scanf("%d", &x);
+    printf("O valor digitado foi %d\n", x);
     printf("Olá Mundo!");
+    //repositorio professor http://github.com/ifmt-cba/lingprog20242
 }
