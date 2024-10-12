@@ -7,19 +7,52 @@ Exercícios sobre os comandos básicos em C
 
 //1. Faça um programa que imprima o seu nome.
 void q1() {
-    printf("João Paulo!");
+    printf("Alfrisiney de Oliveira Dias");
 }
 
 //2. Faça um programa que imprima o produto dos valores 30 e 27.
+void q2() {
+    int x = 810;
+    printf("o produto dos valores 30 e 27 é: %d" ,x);
+}
 
 //3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
+void q3(){
+    float y = 8.33333333333;
+    printf("a média aritmética de 5, 8, 12 é: %f" ,y);
+}
 
 //4. Faça um programa que leia e imprima um número inteiro.
+void q4(){
+    int x = 0;
+    printf("\nDigite um número inteiro: ");
+    scanf("%d", &x);
+    printf("O valor digitado foi %d\n", x);
+}
 
 //5. Faça um programa que leia dois números reais e os imprima.
+void q5(){
+    float x = 0, y = 0;
+    printf("\n Digite um número real");
+    scanf("%f", &x);
+    printf("\n Digite outro número real");
+    scanf("%f", &y);
+    printf("Os números digitados foram %f %f",x ,y);
+}
+
 
 //6. Faça um programa que leia um número inteiro e imprima o seu
 //   antecessor e o seu sucessor.
+void q6(){
+    int x = 0, a = 0, s = 0; 
+    printf("\n Digite um número inteiro");
+    scanf("%d", &x);
+    a=x-1;
+    s=x+1;
+    printf("\n O número antecessor é: %d",a);
+    printf("\n O número sucessor é: %d",s);
+}
+
 
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
@@ -88,6 +121,6 @@ void q1() {
 //    necessário também ler o valor da cotação do dólar.
 
 int main() {
-    q1();
+    q6();
     return EXIT_SUCCESS;
 }
