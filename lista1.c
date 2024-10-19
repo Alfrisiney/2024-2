@@ -56,20 +56,71 @@ void q6(){
 
 //7. Faça um programa que leia o nome o endereço e o telefone de
 //   um cliente e ao final, imprima esses dados.
+void q7(){
+    char nome[50], end[50], tel[30];
+    printf("\n Digite seu nome:");
+    scanf(" %50[^\n]", nome);
+    printf("\n Digite o seu endereço:");
+    scanf(" %50[^\n]", end);
+    printf("\n Digite seu telefone:");
+    scanf(" %14[^\n]", tel);
+    printf("NOME: %s\nENDEREÇO: %s\nTELEFONE: %s\n", nome, end , tel);
+}
 
 //8. Faça um programa que leia dois números inteiros e imprima a
 //   subtração deles.
+void q8(){
+    int x = 0, y = 0, z = 0;
+    printf("\n Digite um numero inteiro:");
+    scanf( "%d", &x);
+    printf("\n Digite outro numero inteiro:");
+    scanf( "%d", &y);
+    z=x-y;
+    printf("\n a subtração de %d e de %d é %d\n",x ,y ,z);
+    
+}
 
-//9. Faça um programa que leia umnúmero real e imprima ¼ deste número.
+
+//9. Faça um programa que leia um número real e imprima ¼ deste número.
+void q9(){
+    float x = 0, y = 0;
+    printf("\n Digite um numero real");
+    scanf("%f" , &x);
+    y=x/4;
+    printf("\n 1/4 deste numero é:%.6f",y);
+
+
+}
+
+
 
 //10. Faça um programa que leia três números reais e calcule a
 //    média aritmética destes números. Ao final, o programa deve
 //    imprimir o resultado do cálculo.
+void q10(){
+    float x = 0, y = 0, z = 0, m = 0;
+    printf("\n Digite tres números\n");
+    scanf("%f%f%f",&x,&y,&z);
+    m=(x+y+z)/3;
+    printf("\n A media aritmética destes números é %f",m);
+    
+}
+
 
 //11. Faça um programa que leia dois números reais e calcule as
 //    quatro operações básicas entre estes dois números, adição,
 //    subtração,multiplicação e divisão. Ao final, o programa
 //    deve imprimir os resultados dos cálculos.
+void q11(){
+    float x = 0, y = 0, adi = 0, sub = 0, mult = 0, div = 0;
+    printf("\nDigite dois números reais\n");
+    scanf("%f%f",&x,&y);
+    adi=x+y;
+    sub=x-y;
+    mult=x*y;
+    div=x/y;
+    printf("SOMA: %f\nSUBTRAÇÃO %f\nMULTIPLICAÇÃO %f\nDIVISÃO %f\n",adi, sub, mult, div);
+}
 
 //12. Faça um programa que leia um número real e calcule o
 //    quadrado deste número. Ao final, o programa deve
@@ -121,6 +172,6 @@ void q6(){
 //    necessário também ler o valor da cotação do dólar.
 
 int main() {
-    q6();
+    q11();
     return EXIT_SUCCESS;
 }
