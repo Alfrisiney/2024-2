@@ -47,8 +47,8 @@ void q6(){
     int x = 0, a = 0, s = 0; 
     printf("\n Digite um número inteiro");
     scanf("%d", &x);
-    a=x-1;
-    s=x+1;
+    a = x - 1;
+    s = x + 1;
     printf("\n O número antecessor é: %d",a);
     printf("\n O número sucessor é: %d",s);
 }
@@ -75,7 +75,7 @@ void q8(){
     scanf( "%d", &x);
     printf("\n Digite outro numero inteiro:");
     scanf( "%d", &y);
-    z=x-y;
+    z = x - y;
     printf("\n a subtração de %d e de %d é %d\n",x ,y ,z);
     
 }
@@ -86,7 +86,7 @@ void q9(){
     float x = 0, y = 0;
     printf("\n Digite um numero real");
     scanf("%f" , &x);
-    y=x/4;
+    y = x / 4;
     printf("\n 1/4 deste numero é:%.6f",y);
 
 
@@ -101,7 +101,7 @@ void q10(){
     float x = 0, y = 0, z = 0, m = 0;
     printf("\n Digite tres números\n");
     scanf("%f%f%f",&x,&y,&z);
-    m=(x+y+z)/3;
+    m = ( x + y + z ) / 3;
     printf("\n A media aritmética destes números é %f",m);
     
 }
@@ -115,10 +115,10 @@ void q11(){
     float x = 0, y = 0, adi = 0, sub = 0, mult = 0, div = 0;
     printf("\nDigite dois números reais\n");
     scanf("%f%f",&x,&y);
-    adi=x+y;
-    sub=x-y;
-    mult=x*y;
-    div=x/y;
+    adi = x + y;
+    sub = x - y;
+    mult = x * y;
+    div = x / y;
     printf("SOMA: %f\nSUBTRAÇÃO %f\nMULTIPLICAÇÃO %f\nDIVISÃO %f\n",adi, sub, mult, div);
 }
 
@@ -129,7 +129,7 @@ void q12(){
     float x = 0, x2 = 0;
     printf("\nDigite um número real\n");
     scanf("%f",&x);
-    x2=(x*x);
+    x2 = ( x * x );
     printf("\nO quadrado de %f é %f",x, x2);
 }
 //13. Faça um programa que leia o saldo de uma conta poupança e
@@ -138,7 +138,7 @@ void q13(){
     float sal = 0, sal_reaju = 0;
     printf("\nDigite o seu salario\n");
     scanf("%f",&sal);
-    sal_reaju=sal+(sal*0.02);
+    sal_reaju = sal + ( sal * 0.02 );
     printf("\nSeu salario com reajuste de 2%% é de %f",sal_reaju);
 }
 
@@ -148,8 +148,8 @@ void q14(){
     float h = 0, b = 0, p = 0, a2 = 0;
     printf("\nDigite a base e altura do retângulo\n");
     scanf("%f%f",&b,&h);
-    p=(b*2+h*2);
-    a2=(b*h);
+    p = ( b * 2 + h * 2 );
+    a2 = ( b * h );
     printf("\nO perimetro do retangulo é %f e a area é %f",p,a2);
 }
 
@@ -160,8 +160,8 @@ void q15(){
     float x = 0, desc = 0, vdesc = 0, vx = 0;
     printf("\nDigite do valor do produto e o percentual de desconto desejado\n");
     scanf("%f%f",&x,&desc);
-    vdesc=(desc/100.0)*x;
-    vx=(x-vdesc);
+    vdesc = ( desc / 100.0 ) * x;
+    vx = ( x - vdesc );
     printf("\nO valor do desconto é de %.2f\nO valor do produto com desconto aplicado é de %.2f",vdesc,vx);
 }
 
@@ -173,7 +173,7 @@ void q16(){
     float sal = 0, perc_reaju = 0, sal_reaju = 0;
     printf("\nDigite seu salario atual e o percentual de rajuste\n");
     scanf("%f%f", &sal,&perc_reaju);
-    sal_reaju=sal+(sal*perc_reaju/100);
+    sal_reaju = sal + ( sal * perc_reaju / 100 );
     printf("\nNovo salario %.2f",sal_reaju);
 }
 
@@ -186,7 +186,7 @@ void q17(){
     float c = 0, f = 0;
     printf("\nDigite a temperatura em graus centígrados\n");
     scanf("%f", &c);
-    f = (9*c+160)/5;
+    f = ( 9 * c + 160 ) / 5;
     printf("\nA temperatura em Fahrenheit é de %.2f",f);
 }
 
