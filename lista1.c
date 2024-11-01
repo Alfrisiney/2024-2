@@ -239,10 +239,19 @@ void q19(){
 //20. Faça um programa que efetue a apresentação do valor da conversão
 //    em real (R$) de um valor lido em dólar (US$). Para isso, será
 //    necessário também ler o valor da cotação do dólar.
+void q20(){
+    float dol = 0, real = 0, cdol = 0;
+    printf("\nDigite a cotação do dolar");
+    scanf("%f", &cdol);
+    printf("\nDigite o valor de dolar para conversão");
+    scanf("%f", &dol);
+    real = dol * cdol;
+    printf("\nO valor em real é de %.2f",real);
+}
 
 
 
 int main() {
-    q19();
+    q20();
     return EXIT_SUCCESS;
 }
