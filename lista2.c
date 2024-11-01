@@ -51,7 +51,13 @@ void exemploCaso() {
 
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
-
+    int x = 0, y = 0, xy = 0;
+    printf("\nDigite 2 números inteiros\n");
+    scanf("%d%d", &x, &y);
+    if (x > 10){
+        xy = x + y;
+        printf("Resultado %d",xy);
+    }
 }
 
 //2. Faça um programa que leia dois valores inteiros e efetue a adição. Caso o valor somado seja maior que 20, este deverá ser apresentado somando-se a ele mais 8, caso o valor somado seja menor ou igual a 20, este deverá ser apresentado subtraindo-se 5.
