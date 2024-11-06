@@ -51,7 +51,7 @@ void exemploCaso() {
 
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
-    int x = 0, y = 0, xy = 0;
+    int x, y, xy;
     printf("Digite 2 números inteiros\n");
     scanf("%d%d", &x, &y);
     xy = x + y;
@@ -155,6 +155,18 @@ void questao07() {
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
 //"Maior do que 20", "Igual a 20"ou "Menor do que 20".
 void questao08() {
+    float x = 0;
+    printf("Digite um número\n");
+    scanf("%f",&x);
+    if (x > 20){
+        printf("Maior que 20");
+    } 
+    if (x < 20){
+        printf("Menor que 20");
+    }
+    if (x == 20){
+        printf("Igual 20");
+    }
 	
 }
 
@@ -318,7 +330,10 @@ int main() {
 			break;
         case 7:
 			questao07();
-			break;						
+			break;	
+        case 8:
+			questao08();
+			break;					
 		case 10:
 			questao10();
 			break;
