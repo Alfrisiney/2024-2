@@ -241,9 +241,9 @@ void q19(){
 //    necessário também ler o valor da cotação do dólar.
 void q20(){
     float dol = 0, real = 0, cdol = 0;
-    printf("\nDigite a cotação do dolar");
+    printf("\nDigite a cotação do dolar\n");
     scanf("%f", &cdol);
-    printf("\nDigite o valor de dolar para conversão");
+    printf("\nDigite o valor em dolar para conversão\n");
     scanf("%f", &dol);
     real = dol * cdol;
     printf("\nO valor em real é de %.2f",real);
@@ -252,6 +252,6 @@ void q20(){
 
 
 int main() {
-    q20();
+    q19();
     return EXIT_SUCCESS;
 }

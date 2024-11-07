@@ -174,7 +174,16 @@ void questao08() {
 //atual. O programa deve imprimir a idade da pessoa. Não se esqueça de verificar se o
 //ano de nascimento informado é válido.
 void questao09() {
-	
+    int ano_nasc = 0, ano_atual = 0, idade = 0;
+    printf("Digite o ano de nascimento e o ano atual\n");
+    scanf("%d%d", &ano_nasc, &ano_atual);
+    idade = ano_nasc - ano_atual;
+    if (ano_nasc <= ano_atual){
+        printf("Ano de nascimento válido");
+    }else{
+        printf("Ano invalido");
+    }
+    printf("Idade: %d")
 }
 
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
@@ -333,6 +342,9 @@ int main() {
 			break;	
         case 8:
 			questao08();
+			break;			
+        case 9:
+			questao09();
 			break;					
 		case 10:
 			questao10();
