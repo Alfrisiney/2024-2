@@ -177,23 +177,43 @@ void questao09() {
     int ano_nasc = 0, ano_atual = 0, idade = 0;
     printf("Digite o ano de nascimento e o ano atual\n");
     scanf("%d%d", &ano_nasc, &ano_atual);
-    idade = ano_nasc - ano_atual;
+    idade = ano_atual - ano_nasc;
     if (ano_nasc <= ano_atual){
-        printf("Ano de nascimento válido");
+        printf("Ano de nascimento válido\n");
     }else{
         printf("Ano invalido");
     }
-    printf("Idade: %d")
+    printf("Idade: %d anos",idade);
 }
 
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
 //crescente.
 void questao10() {
-
+    int x = 0, y = 0, z = 0;
+    printf("Digite tres numeros inteiros\n");
+    scanf("%d%d%d", &x, &y, &z);
+    if (x < y && y < z) printf ("%d\n%d\n%d\n",x,y,z);
+    if (x < z && z < y) printf ("%d\n%d\n%d\n",x,z,y);
+    if (y < x && x < z) printf ("%d\n%d\n%d\n",y,x,z);
+    if (y < z && z < x) printf ("%d\n%d\n%d\n",y,z,x);
+    if (z < x && x < y) printf ("%d\n%d\n%d\n",z,x,y);
+    if (z < y && y < x) printf ("%d\n%d\n%d\n",z,y,x);
 }
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
 void questao11() {
+    float x = 0, y = 0, z = 0;
+    printf("Digite tres números\n");
+    scanf("%f%f%f", &x, &y, &z);
+    if (x > y && x > z){
+    printf("%.0f é o maior número",x);
+    }
+    if (y > x && y > z){
+    printf("%.0f é o maior número",y);
+    }
+    if (z > y && z > x){
+    printf("%.0f é o maior número",z);
+    }
 	
 }
 
@@ -202,12 +222,43 @@ void questao11() {
 //• Se é menor de idade
 //• Se é maior de 65 anos
 void questao12() {
+    int idade;
+    printf("Digite sua idade\n");
+    scanf("%d", &idade);
+    if (idade < 18){
+        printf("Menor de idade");
+    }
+    if (idade > 18 && idade <= 65){
+        printf("Maior de idade");
+    }
+    if (idade > 65){
+        printf("maior de 65 anos");
+    }
 	
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
-//prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
+//prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"
+//(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
+    char nome[50];
+    float nota1 = 0, nota2 = 0, media = 0;
+    printf("Digite seu nome\n");
+    scanf(" %50[^\n]", nome);
+    printf("Digite a nota da prova e em seguida a nota da prova 2\n");
+    scanf("%f%f", &nota1, &nota2);
+    media = (nota1 + nota2)/2;
+    if (media >= 7){
+        printf("NOME: %s\nNOTA DA PROVA 1: %.1f\nNOTA DA PROVA 2: %.1f\nMÉDIA DAS NOTAS: %.1f\nAPROVADO\n",nome, nota1, nota2, media);
+    }
+    if (media < 3){
+        printf("NOME: %s\nNOTA DA PROVA 1: %.1f\nNOTA DA PROVA 2: %.1f\nMÉDIA DAS NOTAS: %.1f\nREPROVADO\n",nome, nota1, nota2, media);
+    }
+    if (media >=3 && media < 7){
+        printf("NOME: %s\nNOTA DA PROVA 1: %.1f\nNOTA DA PROVA 2: %.1f\nMÉDIA DAS NOTAS: %.1f\nPROVA FINAL\n",nome, nota1, nota2, media);
+    }
+
+
 	
 }
 
@@ -219,13 +270,38 @@ void questao13() {
 //Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 //Maior que R$2000,00 30%
 void questao14() {
-	
+	float sal = 0, sal_desc = 0;
+    printf("Digite seu salário\n");
+    scanf("%f", &sal);
+    if (sal <= 600){
+        printf("ISENTO");
+    }
+    if (sal > 600 && sal <= 1200){
+        sal_desc = sal * .2;
+        printf("DESCONTO: %.2f",sal_desc);
+    }
+    if (sal > 1200 && sal <= 2000){
+        sal_desc = sal * .25;
+        printf("DESCONTO: %.2f",sal_desc);
+    }
+    if (sal > 2000){
+        sal_desc = sal * .3;
+        printf("DESCONTO: %.2f",sal_desc);
+    }
 }
 
-//15. Um comerciante comprou umproduto e quer vendê-lo com umlucro de 45% se o valor
+//15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o valor
 //da compra for menor que R$20,00, caso contrário, o lucro será de 30%. Faça um programa que leia o valor do produto e imprima o valor da venda.
 void questao15() {
-	
+    float vproduto = 0, pvenda;
+    printf("Digite o valor do produto\n");
+    scanf("%f", &vproduto);
+    if (vproduto <= 20){
+        pvenda = vproduto * 1.45;
+        printf("Valor da venda%.2f\n",pvenda);
+    } else
+        pvenda = vproduto * 1.3;
+        printf("Valor da venda%.2f\n",pvenda);	
 }
 
 //16. A confederação brasileira de natação irá promover eliminatórias para o próximo
@@ -237,10 +313,29 @@ void questao15() {
 //Juvenil B 14 - 17 anos
 //Sênior maiores de 18 anos
 void questao16() {
-	
+	int idade;
+    printf("Digite a sua idade\n");
+    scanf("%d", &idade);
+    if (idade >= 5 && idade <= 7){
+    printf("Categoria infantil A\n");
+    }
+    if (idade > 7 && idade <= 10){
+    printf("Categoria infantil B\n");
+    }
+    if (idade > 10 && idade <= 13){
+    printf("Categoria Juvenil A\n");
+    }
+    if (idade > 13 && idade <= 17){
+    printf("Categoria Juvenil B\n");
+    }
+    if (idade > 18){
+    printf("Categoria Sênior\n");
+    }
+
 }
 
-//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro. Umvendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
+//17. Depois da liberação do governo para as mensalidades dos planos de saúde, as pessoas começaram a fazer pesquisas para descobrir um bom plano, não muito caro.
+// Um vendedor de um plano de saúde apresentou a tabela a seguir. Faça um programa que entre com o nome e a idade de uma pessoa e imprima o nome e o valor que ela deverá pagar.
 //Idade Valor
 //Até 10 anos R$30,00
 //Acima de 10 até 29 anos R$60,00
@@ -249,6 +344,36 @@ void questao16() {
 //Acima de 59 até 65 anos R$250,00
 //Maior que 65 anos R$400,00
 void questao17() {
+    char nome[50];
+    int idade;
+    printf("Digite seu nome\n");
+    scanf(" %50[^\n]", nome);
+    printf("Digite sua idade\n");
+    scanf(" %d", &idade);
+    if (idade <= 10){
+        printf("R$30,00");
+    }
+    
+    if (idade > 10 && idade <= 29){
+        printf("R$60,00");
+    }
+    
+    if (idade > 29 && idade <= 45){
+        printf("R$120,00");
+    }
+    
+    if (idade > 45 && idade <= 55){
+        printf("R$150,00");
+    }
+    
+    if (idade > 59 && idade <= 65){
+        printf("R$250,00");
+    }
+    
+    if (idade > 65){
+        printf("R$400,00");
+    }
+
 	
 }
 
@@ -346,8 +471,30 @@ int main() {
         case 9:
 			questao09();
 			break;					
-		case 10:
+		
+        case 10:
 			questao10();
+			break;
+        case 11:
+			questao11();
+			break;
+        case 12:
+			questao12();
+			break;
+        case 13:
+			questao13();
+			break;
+        case 14:
+			questao14();
+			break;
+        case 15:
+			questao15();
+			break;
+        case 16:
+			questao16();
+			break;
+        case 17:
+			questao17();
 			break;
 		default:
 			printf("Opção inválida!");
